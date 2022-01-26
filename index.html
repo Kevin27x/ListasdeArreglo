@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--HOJA ESTILOS-->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  
+</head>
+<body>
+    <select name="listaSelect" id="listaSelect">
+        <option value="">Seleccione especialidad</option>
+        <option id="btnRadio" value="sRadio">Radiología</option>
+        <option value="sTrauma">Traumatologia</option>
+        <option value="sDental">Dental</option>
+    </select>
+    <main>
+    <div id="pacientes"></div>
+
+    <table id="tabla">
+        <section>
+            <h4 id="ingresePaciente"></h4>
+            <div id="entradas"></div>
+        </section>  
+        
+    </table>
+    <div class="eliminarDiv">
+        <button id = "eliminarBoton" onclick="eliminar()"></button>
+    </div>
+
+    <h4 id="listaGuionTitulo"></h4>
+    <div id="listaGuion"></div>
+
+    <h4 id="listaFonasa"></h4>
+    <div id="fonasa"></div>
+    
+    <h4 id="listaIsapre"></h4>
+    <div id="isapre"></div>
+
+    <h4 id="listaCompleta"></h4>
+    <div id="completa"></div>
+   
+    </main>
+    <!--JAVASCRIPT-->
+    <script src="js/index.js"></script>
+    <!--CDN JQUERY V3.6.0-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+</html>
