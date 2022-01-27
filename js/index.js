@@ -130,14 +130,13 @@ let dental = [{
         prevision: "ISAPRE",
     }
 ];
-//var guardarEspecialidad = "";
+
 //LISTA SELECTOR
 const listaSelect = document.getElementById("listaSelect");
 listaSelect.addEventListener("change", function(){
     
     switch(listaSelect.value){
         case "":
-            
             console.log("nada");
         break;
 
@@ -229,8 +228,6 @@ function listado(especialidad){
 function fonasa(especialidad){
     let ingresePaciente = document.getElementById("ingresePaciente");
     ingresePaciente.innerHTML = "INGRESE EL SIGUIENTE PACIENTE"
-
-
     //apuntadores a titulo fonasa y lista de pacientes fonasa
     let listaFonasa = document.getElementById("listaFonasa");
     listaFonasa.innerHTML = "<p>Lista de pacientes FONASA</p>"; 
@@ -251,13 +248,13 @@ function fonasa(especialidad){
                 
             let nombre = especialidad[i].paciente;
             
-            fonasa.innerHTML += `<p>${nombre} - FONASA</p>`
+            fonasa.innerHTML += `<p>${nombre} - FONASA</p>`;
         }
         else {
             
             let nombre = especialidad[i].paciente; 
             
-            isapre.innerHTML += `<p>${nombre} - ISAPRE</p>`
+            isapre.innerHTML += `<p>${nombre} - ISAPRE</p>`;
         }  
     }
     listaCompleta()
@@ -271,23 +268,23 @@ function listaCompleta(){
     completa.innerHTML = "";
     
     radiologia.forEach(function(element){
-        let paciente = element.paciente
-        completa.innerHTML += `<p>${paciente}</p>`
+        let paciente = element.paciente;
+        completa.innerHTML += `<p>${paciente}</p>`;
 
-    })
+    });
 
     traumatologia.forEach(function(element){
-        let paciente = element.paciente
-        completa.innerHTML += `<p>${paciente}</p>`
+        let paciente = element.paciente;
+        completa.innerHTML += `<p>${paciente}</p>`;
 
-    })
+    });
 
     dental.forEach(function(element){
-        let paciente = element.paciente
-        completa.innerHTML += `<p>${paciente}</p>`
+        let paciente = element.paciente;
+        completa.innerHTML += `<p>${paciente}</p>`;
 
-    })
-}
+    });
+};
 //Crear sección de inputs y el botón con evento ONCLICK, para agregar pacientes
 function creaBoton(especialidad){
     //Crear un boton con contenido, valor (el valor es almacenado acá para rescatarlo luego, en la función ONCLICK) y id
@@ -334,7 +331,6 @@ function creaBoton(especialidad){
     let eliminarBoton = document.getElementById("eliminarBoton");
     eliminarBoton.textContent = "Eliminar primer y último paciente";
 
-
     //Se establece la función del evento ONCLICK
     newButton.onclick = function(){
         //Recoger los valores de todos los inputs
@@ -375,11 +371,9 @@ function creaBoton(especialidad){
                 listaCompleta();
 
             break;
-        };
-
-        
-    }  
-}
+        };      
+    };  
+};
 //Elimina el primer y último paciente del Array actuál (valor del botonAgregar) y luego, actualiza tabla y listas
 function eliminar(){
     
